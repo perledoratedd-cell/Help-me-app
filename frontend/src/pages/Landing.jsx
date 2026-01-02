@@ -13,29 +13,26 @@ import {
   Shield, 
   Star,
   ArrowRight,
-  ChefHat,
-  Flower2,
-  Scissors,
-  Brain,
-  Sparkles,
-  Truck,
-  Baby,
-  Heart,
-  Wrench,
-  Eye
+  Heart
 } from "lucide-react";
 
-const ICON_MAP = {
-  ChefHat: ChefHat,
-  Flower2: Flower2,
-  Scissors: Scissors,
-  Brain: Brain,
-  Sparkles: Sparkles,
-  Truck: Truck,
-  Baby: Baby,
-  Heart: Heart,
-  Wrench: Wrench,
-  Eye: Eye,
+// Category images mapping
+const CATEGORY_IMAGES = {
+  cat_cooking: "https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg",
+  cat_gardening: "https://images.pexels.com/photos/6508952/pexels-photo-6508952.jpeg",
+  cat_hairdressing: "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg",
+  cat_psychology: "https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg",
+  cat_sewing: "https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg",
+  cat_painting: "https://images.pexels.com/photos/6474446/pexels-photo-6474446.jpeg",
+  cat_cleaning: "https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg",
+  cat_moving: "https://images.pexels.com/photos/7464722/pexels-photo-7464722.jpeg",
+  cat_childcare: "https://images.pexels.com/photos/3536630/pexels-photo-3536630.jpeg",
+  cat_eldercare: "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg",
+  cat_accessibility: "https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg",
+  cat_reading: "https://images.pexels.com/photos/1741231/pexels-photo-1741231.jpeg",
+  cat_repairs: "https://images.pexels.com/photos/5691639/pexels-photo-5691639.jpeg",
+  cat_technology: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg",
+  cat_pets: "https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg",
 };
 
 export default function Landing() {
@@ -62,11 +59,6 @@ export default function Landing() {
 
   const handleSearch = () => {
     navigate(`/categories${postalCode ? `?postal_code=${postalCode}` : ''}`);
-  };
-
-  const getIcon = (iconName) => {
-    const Icon = ICON_MAP[iconName] || Sparkles;
-    return Icon;
   };
 
   return (
@@ -223,25 +215,28 @@ export default function Landing() {
               ))
             ) : (
               categories.map((category) => {
-                const Icon = getIcon(category.icon);
+                const imageUrl = CATEGORY_IMAGES[category.category_id] || "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg";
                 return (
                   <Card 
                     key={category.category_id}
-                    className="group cursor-pointer border border-slate-200 hover:border-[#E07A5F]/30 hover:shadow-md transition-all duration-200"
+                    className="group cursor-pointer border-0 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
                     onClick={() => navigate(`/providers?category=${category.category_id}`)}
                     data-testid={`category-${category.category_id}`}
                   >
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 rounded-xl bg-[#E07A5F]/10 flex items-center justify-center mb-4 group-hover:bg-[#E07A5F]/20 transition-colors">
-                        <Icon className="w-6 h-6 text-[#E07A5F]" />
+                    {/* Image with overlay */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={`${imageUrl}?w=300&h=225&fit=crop`}
+                        alt={category.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="font-bold text-lg text-white drop-shadow-lg">
+                          {category.name}
+                        </h3>
                       </div>
-                      <h3 className="font-semibold text-[#1A202C] mb-1 group-hover:text-[#0F4C75] transition-colors">
-                        {category.name}
-                      </h3>
-                      <p className="text-sm text-[#718096] line-clamp-2">
-                        {category.description}
-                      </p>
-                    </CardContent>
+                    </div>
                   </Card>
                 );
               })
