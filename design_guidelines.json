@@ -1,0 +1,141 @@
+{
+  "identity": {
+    "name": "Help My New",
+    "persona": "The Soft Utility",
+    "tone": "Trustworthy, Urgent, Accessible, Global, Human",
+    "archetype": "Organic & Earthy (Trust) + Swiss High-Contrast (Clarity)"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["600", "800"],
+      "usage": "Use for all section headers, hero titles, and modal titles. Tight tracking for sizes > 32px."
+    },
+    "body": {
+      "font_family": "IBM Plex Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for all paragraphs, inputs, and data tables. Excellent for multi-language legibility."
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Use for pricing numbers, transaction IDs, and technical data."
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Warm Terracotta",
+      "hex": "#E07A5F",
+      "usage": "Primary CTAs, 'Urgent' badges, Heart icons. Represents human warmth and immediate help."
+    },
+    "secondary": {
+      "name": "Deep Ocean Blue",
+      "hex": "#0F4C75",
+      "usage": "Headers, Navigation, Trust indicators, 'Verified' badges. Represents professionalism and security."
+    },
+    "background": {
+      "default": "#F9F9F9",
+      "paper": "#FFFFFF",
+      "subtle": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#1A202C",
+      "secondary": "#4A5568",
+      "muted": "#718096"
+    },
+    "status": {
+      "success": "#38A169",
+      "warning": "#D69E2E",
+      "error": "#E53E3E",
+      "info": "#3182CE"
+    }
+  },
+  "layout": {
+    "marketing": {
+      "grid_style": "Bento Grid Mode A (The Tetris Grid)",
+      "spacing": "Generous (p-8 to p-24)",
+      "rules": [
+        "Asymmetry is mandatory.",
+        "Never center text by default on landing pages.",
+        "Use overlapping elements to create depth."
+      ]
+    },
+    "dashboard": {
+      "grid_style": "Control Room Grid Mode B",
+      "spacing": "Compact (p-4 to p-6)",
+      "rules": [
+        "Dense information density.",
+        "Use 100% height for widgets to align perfectly.",
+        "Cardless design preferred for data tables."
+      ]
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or slightly rounded (rounded-lg)",
+      "animation": "Scale down on click (active:scale-95), Lift on hover (-translate-y-0.5)",
+      "shadow": "Shadow-md on hover"
+    },
+    "cards": {
+      "style": "Flat background with 1px subtle border (border-slate-200). No heavy drop shadows.",
+      "hover": "Border color darkens, slight lift."
+    },
+    "inputs": {
+      "style": "Shadcn default but with increased padding (h-12) for touch accessibility.",
+      "focus": "Ring-2 ring-offset-2 ring-primary/50"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Use subtle grain/noise on solid backgrounds to avoid 'flat' digital look.",
+    "glassmorphism": "Use 'Crystal Glass' (backdrop-blur-xl + border-white/40) for sticky headers and floating action buttons.",
+    "motion": "All interactive elements must have layout transitions. Use 'framer-motion' for page transitions."
+  },
+  "accessibility": {
+    "contrast": "Ensure 4.5:1 contrast ratio for all text. Use APCA standards.",
+    "touch_targets": "Minimum 44x44px for all clickable elements.",
+    "screen_readers": "All images must have descriptive alt text. Use semantic HTML."
+  },
+  "image_urls": {
+    "hero_community": {
+      "url": "https://images.unsplash.com/photo-1712231872585-7ff87adc7bce",
+      "alt": "Diverse group of people representing community support",
+      "category": "Hero Section"
+    },
+    "category_cooking": {
+      "url": "https://images.unsplash.com/photo-1697020358336-3db2f502242a",
+      "alt": "Professional chef cooking in a home kitchen",
+      "category": "Service Category"
+    },
+    "category_gardening": {
+      "url": "https://images.unsplash.com/photo-1759422261399-3370e715b70f",
+      "alt": "Hands planting flowers in a garden",
+      "category": "Service Category"
+    },
+    "category_elderly_care": {
+      "url": "https://images.unsplash.com/photo-1675179182818-e3518274be24",
+      "alt": "Caregiver helping elderly woman reading",
+      "category": "Service Category"
+    },
+    "category_painting": {
+      "url": "https://images.unsplash.com/photo-1751666526244-40239a251eae",
+      "alt": "Professional painter painting a wall white",
+      "category": "Service Category"
+    }
+  },
+  "instructions_to_main_agent": [
+    "DO NOT use generic 'Inter' font for headings. Import 'Manrope' and 'IBM Plex Sans' from Google Fonts.",
+    "Implement a 'Language Selector' prominently in the top nav.",
+    "Ensure the 'Urgent Help' button is the most visible element on the screen (Sticky on mobile).",
+    "Use the 'Warm Terracotta' color sparingly for high-impact actions only.",
+    "For the 'Provider Dashboard', prioritize data density and clarity over decorative elements.",
+    "All forms must be accessible and keyboard navigable.",
+    "Use 'sonner' for all toast notifications.",
+    "Do not use gradients for text or backgrounds unless it is a very subtle noise texture."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop' aesthetics (generic centered layouts, blue/purple gradients).",
+    "Create depth through z-index and layered elements.",
+    "Use 2-3x more spacing than typical designs.",
+    "Every interaction needs a micro-animation.",
+    "Never use transparent backgrounds without a blur or scrim."
+  ]
+}
