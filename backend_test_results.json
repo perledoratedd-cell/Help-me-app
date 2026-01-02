@@ -1,0 +1,632 @@
+{
+  "timestamp": "2026-01-02T17:19:09.114670",
+  "total_tests": 19,
+  "passed_tests": 19,
+  "success_rate": 1.0,
+  "results": [
+    {
+      "test": "Root API",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "message": "Help My New API",
+        "version": "1.0"
+      }
+    },
+    {
+      "test": "Seed Categories",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "message": "Seeded 15 categories"
+      }
+    },
+    {
+      "test": "Get Categories",
+      "success": true,
+      "details": "",
+      "response_data": [
+        {
+          "category_id": "cat_cooking",
+          "name": "Cocina",
+          "icon": "ChefHat",
+          "description": "Ayuda en cocina y preparaci\u00f3n de alimentos",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_gardening",
+          "name": "Jardiner\u00eda",
+          "icon": "Flower2",
+          "description": "Cuidado de jardines y plantas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_hairdressing",
+          "name": "Peluquer\u00eda",
+          "icon": "Scissors",
+          "description": "Servicios de peluquer\u00eda y est\u00e9tica",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_psychology",
+          "name": "Psicolog\u00eda",
+          "icon": "Brain",
+          "description": "Apoyo psicol\u00f3gico y bienestar mental",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_sewing",
+          "name": "Costura",
+          "icon": "Shirt",
+          "description": "Arreglos y confecci\u00f3n de ropa",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_painting",
+          "name": "Pintura",
+          "icon": "Paintbrush",
+          "description": "Pintura de interiores y exteriores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_cleaning",
+          "name": "Limpieza",
+          "icon": "Sparkles",
+          "description": "Limpieza del hogar y oficinas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_moving",
+          "name": "Mudanzas",
+          "icon": "Truck",
+          "description": "Ayuda con mudanzas y transporte",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_childcare",
+          "name": "Cuidado infantil",
+          "icon": "Baby",
+          "description": "Cuidado de ni\u00f1os y actividades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_eldercare",
+          "name": "Cuidado de mayores",
+          "icon": "Heart",
+          "description": "Asistencia y compa\u00f1\u00eda para personas mayores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_accessibility",
+          "name": "Accesibilidad",
+          "icon": "Eye",
+          "description": "Ayuda para personas con discapacidad visual u otras necesidades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_reading",
+          "name": "Lectura y compa\u00f1\u00eda",
+          "icon": "BookOpen",
+          "description": "Lectura de cuentos, acompa\u00f1amiento y conversaci\u00f3n",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_repairs",
+          "name": "Reparaciones",
+          "icon": "Wrench",
+          "description": "Peque\u00f1as reparaciones del hogar",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_technology",
+          "name": "Tecnolog\u00eda",
+          "icon": "Laptop",
+          "description": "Ayuda con dispositivos y tecnolog\u00eda",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_pets",
+          "name": "Mascotas",
+          "icon": "Cat",
+          "description": "Cuidado y paseo de mascotas",
+          "parent_id": null
+        }
+      ]
+    },
+    {
+      "test": "Categories Count Check",
+      "success": true,
+      "details": "Found 15 categories (expected 15)",
+      "response_data": null
+    },
+    {
+      "test": "Get Categories (es)",
+      "success": true,
+      "details": "",
+      "response_data": [
+        {
+          "category_id": "cat_cooking",
+          "name": "Cocina",
+          "icon": "ChefHat",
+          "description": "Ayuda en cocina y preparaci\u00f3n de alimentos",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_gardening",
+          "name": "Jardiner\u00eda",
+          "icon": "Flower2",
+          "description": "Cuidado de jardines y plantas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_hairdressing",
+          "name": "Peluquer\u00eda",
+          "icon": "Scissors",
+          "description": "Servicios de peluquer\u00eda y est\u00e9tica",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_psychology",
+          "name": "Psicolog\u00eda",
+          "icon": "Brain",
+          "description": "Apoyo psicol\u00f3gico y bienestar mental",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_sewing",
+          "name": "Costura",
+          "icon": "Shirt",
+          "description": "Arreglos y confecci\u00f3n de ropa",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_painting",
+          "name": "Pintura",
+          "icon": "Paintbrush",
+          "description": "Pintura de interiores y exteriores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_cleaning",
+          "name": "Limpieza",
+          "icon": "Sparkles",
+          "description": "Limpieza del hogar y oficinas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_moving",
+          "name": "Mudanzas",
+          "icon": "Truck",
+          "description": "Ayuda con mudanzas y transporte",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_childcare",
+          "name": "Cuidado infantil",
+          "icon": "Baby",
+          "description": "Cuidado de ni\u00f1os y actividades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_eldercare",
+          "name": "Cuidado de mayores",
+          "icon": "Heart",
+          "description": "Asistencia y compa\u00f1\u00eda para personas mayores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_accessibility",
+          "name": "Accesibilidad",
+          "icon": "Eye",
+          "description": "Ayuda para personas con discapacidad visual u otras necesidades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_reading",
+          "name": "Lectura y compa\u00f1\u00eda",
+          "icon": "BookOpen",
+          "description": "Lectura de cuentos, acompa\u00f1amiento y conversaci\u00f3n",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_repairs",
+          "name": "Reparaciones",
+          "icon": "Wrench",
+          "description": "Peque\u00f1as reparaciones del hogar",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_technology",
+          "name": "Tecnolog\u00eda",
+          "icon": "Laptop",
+          "description": "Ayuda con dispositivos y tecnolog\u00eda",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_pets",
+          "name": "Mascotas",
+          "icon": "Cat",
+          "description": "Cuidado y paseo de mascotas",
+          "parent_id": null
+        }
+      ]
+    },
+    {
+      "test": "Get Categories (en)",
+      "success": true,
+      "details": "",
+      "response_data": [
+        {
+          "category_id": "cat_cooking",
+          "name": "Cooking",
+          "icon": "ChefHat",
+          "description": "Kitchen help and food preparation",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_gardening",
+          "name": "Gardening",
+          "icon": "Flower2",
+          "description": "Garden and plant care",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_hairdressing",
+          "name": "Hairdressing",
+          "icon": "Scissors",
+          "description": "Hair and beauty services",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_psychology",
+          "name": "Psychology",
+          "icon": "Brain",
+          "description": "Psychological support and mental wellness",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_sewing",
+          "name": "Sewing",
+          "icon": "Shirt",
+          "description": "Clothing repairs and tailoring",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_painting",
+          "name": "Painting",
+          "icon": "Paintbrush",
+          "description": "Interior and exterior painting",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_cleaning",
+          "name": "Cleaning",
+          "icon": "Sparkles",
+          "description": "Home and office cleaning",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_moving",
+          "name": "Moving",
+          "icon": "Truck",
+          "description": "Moving and transport assistance",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_childcare",
+          "name": "Childcare",
+          "icon": "Baby",
+          "description": "Child care and activities",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_eldercare",
+          "name": "Elder Care",
+          "icon": "Heart",
+          "description": "Assistance and companionship for elderly",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_accessibility",
+          "name": "Accessibility",
+          "icon": "Eye",
+          "description": "Help for people with visual or other disabilities",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_reading",
+          "name": "Reading & Company",
+          "icon": "BookOpen",
+          "description": "Story reading, companionship and conversation",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_repairs",
+          "name": "Repairs",
+          "icon": "Wrench",
+          "description": "Small home repairs",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_technology",
+          "name": "Technology",
+          "icon": "Laptop",
+          "description": "Help with devices and technology",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_pets",
+          "name": "Pets",
+          "icon": "Cat",
+          "description": "Pet care and walking",
+          "parent_id": null
+        }
+      ]
+    },
+    {
+      "test": "Get Categories (fr)",
+      "success": true,
+      "details": "",
+      "response_data": [
+        {
+          "category_id": "cat_cooking",
+          "name": "Cuisine",
+          "icon": "ChefHat",
+          "description": "Ayuda en cocina y preparaci\u00f3n de alimentos",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_gardening",
+          "name": "Jardinage",
+          "icon": "Flower2",
+          "description": "Cuidado de jardines y plantas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_hairdressing",
+          "name": "Coiffure",
+          "icon": "Scissors",
+          "description": "Servicios de peluquer\u00eda y est\u00e9tica",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_psychology",
+          "name": "Psychologie",
+          "icon": "Brain",
+          "description": "Apoyo psicol\u00f3gico y bienestar mental",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_sewing",
+          "name": "Couture",
+          "icon": "Shirt",
+          "description": "Arreglos y confecci\u00f3n de ropa",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_painting",
+          "name": "Peinture",
+          "icon": "Paintbrush",
+          "description": "Pintura de interiores y exteriores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_cleaning",
+          "name": "Nettoyage",
+          "icon": "Sparkles",
+          "description": "Limpieza del hogar y oficinas",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_moving",
+          "name": "D\u00e9m\u00e9nagement",
+          "icon": "Truck",
+          "description": "Ayuda con mudanzas y transporte",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_childcare",
+          "name": "Garde d'enfants",
+          "icon": "Baby",
+          "description": "Cuidado de ni\u00f1os y actividades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_eldercare",
+          "name": "Soins aux personnes \u00e2g\u00e9es",
+          "icon": "Heart",
+          "description": "Asistencia y compa\u00f1\u00eda para personas mayores",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_accessibility",
+          "name": "Accessibilit\u00e9",
+          "icon": "Eye",
+          "description": "Ayuda para personas con discapacidad visual u otras necesidades",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_reading",
+          "name": "Lecture et compagnie",
+          "icon": "BookOpen",
+          "description": "Lectura de cuentos, acompa\u00f1amiento y conversaci\u00f3n",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_repairs",
+          "name": "R\u00e9parations",
+          "icon": "Wrench",
+          "description": "Peque\u00f1as reparaciones del hogar",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_technology",
+          "name": "Technologie",
+          "icon": "Laptop",
+          "description": "Ayuda con dispositivos y tecnolog\u00eda",
+          "parent_id": null
+        },
+        {
+          "category_id": "cat_pets",
+          "name": "Animaux",
+          "icon": "Cat",
+          "description": "Cuidado y paseo de mascotas",
+          "parent_id": null
+        }
+      ]
+    },
+    {
+      "test": "User Registration",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl9lMGQ5OTA0ZmJiNmEiLCJlbWFpbCI6InRlc3RfMWI1MzY3ODFAZXhhbXBsZS5jb20iLCJyb2xlIjoiY2xpZW50IiwiZXhwIjoxNzY3OTc5MTQ1fQ.-NS2QozQ97Fq3CegpBPDvjWc9iSeX7gpuDs1RvA-IAc",
+        "user": {
+          "user_id": "user_e0d9904fbb6a",
+          "email": "test_1b536781@example.com",
+          "name": "Test User f9f3",
+          "role": "client",
+          "preferred_language": "es"
+        }
+      }
+    },
+    {
+      "test": "Registration for Login Test",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl9hM2U1Y2JhZmI0NzkiLCJlbWFpbCI6ImxvZ2luX3Rlc3RfODU0OTJkNDBAZXhhbXBsZS5jb20iLCJyb2xlIjoiY2xpZW50IiwiZXhwIjoxNzY3OTc5MTQ1fQ.vV-bvFD7M-64y1hVlp90GpA95zVKLvkGhqQrPutmfmk",
+        "user": {
+          "user_id": "user_a3e5cbafb479",
+          "email": "login_test_85492d40@example.com",
+          "name": "Login Test User",
+          "role": "client",
+          "preferred_language": "en"
+        }
+      }
+    },
+    {
+      "test": "User Login",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl9hM2U1Y2JhZmI0NzkiLCJlbWFpbCI6ImxvZ2luX3Rlc3RfODU0OTJkNDBAZXhhbXBsZS5jb20iLCJyb2xlIjoiY2xpZW50IiwiZXhwIjoxNzY3OTc5MTQ1fQ.vV-bvFD7M-64y1hVlp90GpA95zVKLvkGhqQrPutmfmk",
+        "user": {
+          "user_id": "user_a3e5cbafb479",
+          "email": "login_test_85492d40@example.com",
+          "name": "Login Test User",
+          "role": "client",
+          "preferred_language": "en",
+          "picture": null
+        }
+      }
+    },
+    {
+      "test": "Get Current User",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "user_id": "user_e0d9904fbb6a",
+        "email": "test_1b536781@example.com",
+        "name": "Test User f9f3",
+        "role": "client",
+        "preferred_language": "es",
+        "picture": null,
+        "location": null,
+        "postal_code": null
+      }
+    },
+    {
+      "test": "Get Providers",
+      "success": true,
+      "details": "",
+      "response_data": []
+    },
+    {
+      "test": "Provider Registration",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "provider_id": "prov_80146f01",
+        "message": "Registered as provider"
+      }
+    },
+    {
+      "test": "Create Service Request",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "request_id": "req_f453c77f",
+        "message": "Request created"
+      }
+    },
+    {
+      "test": "Get User Requests",
+      "success": true,
+      "details": "",
+      "response_data": [
+        {
+          "request_id": "req_f453c77f",
+          "client_id": "user_e0d9904fbb6a",
+          "provider_id": null,
+          "category_id": "cat_cooking",
+          "title": "Need help with dinner preparation",
+          "description": "Looking for someone to help prepare a family dinner",
+          "urgency": "normal",
+          "status": "pending",
+          "price_agreed": null,
+          "location": null,
+          "postal_code": "28001",
+          "created_at": "2026-01-02T17:19:05.936651+00:00",
+          "updated_at": "2026-01-02T17:19:05.936651+00:00"
+        }
+      ]
+    },
+    {
+      "test": "Get Specific Request",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "request_id": "req_f453c77f",
+        "client_id": "user_e0d9904fbb6a",
+        "provider_id": null,
+        "category_id": "cat_cooking",
+        "title": "Need help with dinner preparation",
+        "description": "Looking for someone to help prepare a family dinner",
+        "urgency": "normal",
+        "status": "pending",
+        "price_agreed": null,
+        "location": null,
+        "postal_code": "28001",
+        "created_at": "2026-01-02T17:19:05.936651+00:00",
+        "updated_at": "2026-01-02T17:19:05.936651+00:00"
+      }
+    },
+    {
+      "test": "Text Translation",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "translated": "Hola, \u00bfc\u00f3mo est\u00e1s?",
+        "original": "Hello, how are you?",
+        "target_language": "es"
+      }
+    },
+    {
+      "test": "Invalid Endpoint",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "detail": "Not Found"
+      }
+    },
+    {
+      "test": "Unauthorized Access",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "detail": "Authentication required"
+      }
+    }
+  ]
+}
