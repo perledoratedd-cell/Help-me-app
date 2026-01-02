@@ -140,8 +140,8 @@ export default function Landing() {
             <div className="relative hidden lg:block">
               <div className="relative z-10">
                 <img
-                  src="https://images.pexels.com/photos/5791678/pexels-photo-5791678.jpeg?w=600&h=500&fit=crop"
-                  alt="Happy family grateful for help received"
+                  src="https://images.pexels.com/photos/4260639/pexels-photo-4260639.jpeg?w=600&h=500&fit=crop"
+                  alt="Diverse happy family laughing together"
                   className="rounded-3xl shadow-2xl object-cover w-full h-[500px]"
                 />
                 
