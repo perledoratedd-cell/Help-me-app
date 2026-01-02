@@ -5,41 +5,25 @@ import { Card, CardContent } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import axios from "axios";
-import { 
-  Search, 
-  ChefHat, 
-  Flower2, 
-  Scissors, 
-  Brain, 
-  Sparkles, 
-  Truck, 
-  Baby, 
-  Heart,
-  Wrench,
-  Eye,
-  BookOpen,
-  Laptop,
-  Cat,
-  Shirt,
-  Paintbrush
-} from "lucide-react";
+import { Search, Sparkles } from "lucide-react";
 
-const ICON_MAP = {
-  ChefHat: ChefHat,
-  Flower2: Flower2,
-  Scissors: Scissors,
-  Brain: Brain,
-  Sparkles: Sparkles,
-  Truck: Truck,
-  Baby: Baby,
-  Heart: Heart,
-  Wrench: Wrench,
-  Eye: Eye,
-  BookOpen: BookOpen,
-  Laptop: Laptop,
-  Cat: Cat,
-  Shirt: Shirt,
-  Paintbrush: Paintbrush,
+// Category images mapping
+const CATEGORY_IMAGES = {
+  cat_cooking: "https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg",
+  cat_gardening: "https://images.pexels.com/photos/6508952/pexels-photo-6508952.jpeg",
+  cat_hairdressing: "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg",
+  cat_psychology: "https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg",
+  cat_sewing: "https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg",
+  cat_painting: "https://images.pexels.com/photos/6474446/pexels-photo-6474446.jpeg",
+  cat_cleaning: "https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg",
+  cat_moving: "https://images.pexels.com/photos/7464722/pexels-photo-7464722.jpeg",
+  cat_childcare: "https://images.pexels.com/photos/3536630/pexels-photo-3536630.jpeg",
+  cat_eldercare: "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg",
+  cat_accessibility: "https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg",
+  cat_reading: "https://images.pexels.com/photos/1741231/pexels-photo-1741231.jpeg",
+  cat_repairs: "https://images.pexels.com/photos/5691639/pexels-photo-5691639.jpeg",
+  cat_technology: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg",
+  cat_pets: "https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg",
 };
 
 export default function Categories() {
@@ -69,11 +53,6 @@ export default function Categories() {
     cat.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     cat.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const getIcon = (iconName) => {
-    const Icon = ICON_MAP[iconName] || Sparkles;
-    return Icon;
-  };
 
   const urgency = searchParams.get("urgency");
 
@@ -121,15 +100,12 @@ export default function Categories() {
       {/* Categories Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array(12).fill(0).map((_, i) => (
-              <Card key={i} className="animate-pulse">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-xl bg-slate-200 mb-4"></div>
-                  <div className="h-6 bg-slate-200 rounded w-3/4 mb-2"></div>
-                  <div className="h-4 bg-slate-100 rounded w-full"></div>
-                </CardContent>
-              </Card>
+              <div key={i} className="animate-pulse">
+                <div className="aspect-[4/3] rounded-2xl bg-slate-200 mb-3"></div>
+                <div className="h-5 bg-slate-200 rounded w-3/4"></div>
+              </div>
             ))}
           </div>
         ) : filteredCategories.length === 0 ? (
@@ -142,25 +118,44 @@ export default function Categories() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 stagger">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 stagger">
             {filteredCategories.map((category) => {
-              const Icon = getIcon(category.icon);
+              const imageUrl = CATEGORY_IMAGES[category.category_id] || "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg";
+              
               return (
                 <Card 
                   key={category.category_id}
-                  className="group cursor-pointer border border-slate-200 hover:border-[#E07A5F]/30 hover:shadow-lg transition-all duration-200 bg-white"
+                  className="group cursor-pointer border-0 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-white"
                   onClick={() => navigate(`/providers?category=${category.category_id}${urgency ? '&urgency=urgent' : ''}`)}
                   data-testid={`category-card-${category.category_id}`}
                 >
-                  <CardContent className="p-6">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E07A5F]/10 to-[#E07A5F]/5 flex items-center justify-center mb-4 group-hover:from-[#E07A5F]/20 group-hover:to-[#E07A5F]/10 transition-colors">
-                      <Icon className="w-7 h-7 text-[#E07A5F]" />
+                  {/* Image with overlay text */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={`${imageUrl}?w=400&h=300&fit=crop`}
+                      alt={category.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    
+                    {/* Category name on image */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="font-bold text-xl text-white drop-shadow-lg">
+                        {category.name}
+                      </h3>
                     </div>
-                    <h3 className="font-semibold text-lg text-[#1A202C] mb-2 group-hover:text-[#0F4C75] transition-colors">
-                      {category.name}
-                    </h3>
+                  </div>
+                  
+                  {/* Description */}
+                  <CardContent className="p-4">
                     <p className="text-sm text-[#718096] line-clamp-2">
                       {category.description}
+                    </p>
+                    
+                    {/* CTA hint */}
+                    <p className="text-xs text-[#E07A5F] font-medium mt-3 group-hover:translate-x-1 transition-transform">
+                      {language === "es" ? "Ver proveedores →" : "View providers →"}
                     </p>
                   </CardContent>
                 </Card>
